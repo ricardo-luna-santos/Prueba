@@ -3,6 +3,10 @@
 // crea una función findUniq que retorne el elemento único.
 
 function findUniq(array) {
+    let unique = array.filter((item) => {
+        return array.indexOf(item) === array.lastIndexOf(item);
+      });
+      console.log(unique)
 }
 
 

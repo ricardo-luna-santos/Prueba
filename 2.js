@@ -3,6 +3,17 @@
 // crea una función numbersTop para obtener los tres elementos más repetidos ordenados de forma descendente por número de repeticiones.
 
 function numbersTop(array) {
+    const all = {};
+
+    array.forEach((number) => {
+      all[number] = (all[number] || 0) + 1;
+    })
+  
+    let newArr = Object.keys(all).sort((a, b) => {
+      return all[b] - all[a]
+    }).splice(0,3)
+  
+    console.log(newArr)
 }
 
 /**
